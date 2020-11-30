@@ -2,7 +2,11 @@
   <section>
     <h2>My Friends</h2>
     <ul>
-      <freind-contact></freind-contact>
+      <freind-contact
+      name="alex"
+      phoneNumber="4444-4444-444"
+      emailAddress="gwartneydev@gmail.com"
+      ></freind-contact>
     </ul>
   </section>
 </template>
@@ -31,5 +35,3 @@ FriendContact: [
   },
 };
 </script>
-
-<styl
