@@ -2,7 +2,7 @@
 
     <li>
 
-        <h2>{{name}} {{ friendIsFavorite ? '(Favorite)' : '' }}</h2>
+        <h2>{{name}} {{ isFavirote ? '(Favorite)' : '' }}</h2>
 
         <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show'}}</button>
 
@@ -12,7 +12,7 @@
             <li><strong>Phone:</strong>{{phoneNumber}}</li>
             <li><strong>Email:</strong>{{emailAddress}}</li>
         </ul>
-
+        
     </li>
 
 </template>
@@ -24,8 +24,14 @@ export default {
         'name',
         'phoneNumber',
         'emailAddress',
-        'is-favorite'
+        'isfavorite',
+        'id'
     ],
+
+    emits:[
+        'toggle-favoritefunction'
+    ],
+
     data(){
         return{
             detailsAreVisible: false,
@@ -37,7 +43,7 @@ export default {
             this.detailsAreVisible = !this.detailsAreVisible;
         },
         toggleFaviroite(){
-            this.$emit('toggle-favorite');
+            this.$emit('toggle-favorite', this.id);
         }
     }
 }
