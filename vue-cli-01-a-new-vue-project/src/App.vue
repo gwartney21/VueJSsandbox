@@ -4,7 +4,7 @@
     <h1>My Friends</h1>
     </header>
 
-    <new-freind></new-freind>
+    <new-freind @add-contact="addContact"></new-freind>
     <ul>
       <freind-contact
       v-for="friend in Friends"
@@ -15,7 +15,7 @@
       :emailAddress="friend.email"
       :isfavorite=" friend.isfavorite"
       @toggle-favorite="toggleFavortieStatus"
-
+      @delete="deleteContact"
       ></freind-contact>
     </ul>
   </section>
@@ -27,8 +27,9 @@ import NewFreind from "./components/NewFreind.vue"
 
 
 export default{
+
   components:{NewFreind,FriendContactVue},
-  
+
   data() {
 
   return {
@@ -59,6 +60,20 @@ Friends: [
             (freind) => freind.id === freindId
           );
           identifiedFreind.isfavorite = !identifiedFreind.isfavorite;
+      },
+
+      addContact(name,phone,email){
+        const newFreindContact = {
+          id: new Date().toISOString(),
+          name: name,
+          phone: phone, 
+          email: email,
+          isfavorite: false
+        };
+        this.Friends.push(newFreindContact)
+      },
+      deleteContact(friendId){
+        this.Friends = this.Friends.filter((friend)=> friend.id !==friendId);
       }
     
     }
