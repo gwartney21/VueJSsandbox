@@ -24,7 +24,7 @@
 <script>
 export default {
         emits:[
-        'add-contact'
+         'add-contact'
         ],
 
         dat(){

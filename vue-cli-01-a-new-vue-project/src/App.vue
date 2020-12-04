@@ -5,6 +5,7 @@
     </header>
 
     <new-freind @add-contact="addContact"></new-freind>
+    
     <ul>
       <freind-contact
       v-for="friend in Friends"
@@ -55,6 +56,7 @@ Friends: [
   },
 
     methods: { 
+      
       toggleFavortieStatus(freindId){
         const identifiedFreind = this.Friends.find(
             (freind) => freind.id === freindId
@@ -72,6 +74,9 @@ Friends: [
         };
         this.Friends.push(newFreindContact)
       },
+
+
+
       deleteContact(friendId){
         this.Friends = this.Friends.filter((friend)=> friend.id !==friendId);
       }
