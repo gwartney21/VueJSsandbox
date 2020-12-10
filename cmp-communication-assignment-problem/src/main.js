@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { createApp } from 'vue';
 
 import App from './App.vue';
@@ -13,3 +14,8 @@ app.component('Add-User', UserData);
 
 
 app.mount("#app")
+=======
+import { createApp } from 'vue'
+
+createApp({}).mount('#app')
+>>>>>>> Stashed changes
