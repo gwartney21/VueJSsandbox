@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <template>
 
     <base-dialog v-if="imputIsInvalid" title="Invalid Input" @close="confirmError">
@@ -117,18 +116,3 @@ textarea:focus {
 .form-control {
   margin: 1rem 0;
 }
-=======
-<template>
-    <h2>add resource</h2>
-</template>
-
-<script>
-export default {
-    
-}
-</script>
-
-<style scoped>
-
->>>>>>> Stashed changes
-</style>
