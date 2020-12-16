@@ -15,7 +15,7 @@ const router = createRouter({
     routes:[
         {path:'/', redirect:'/teams'},
         {path:'/teams', components:{default:TeamsList, footer:TeamsFooter}, 
-        //allows you to acess $router.metta to check if the 
+        //allows you to acess $router.metta to control and use in other hooks
         meta:{needsAuth:true},
         children:[
             {name: 'team-members' , path:'/teams/:teamId', component:TeamMembers},
