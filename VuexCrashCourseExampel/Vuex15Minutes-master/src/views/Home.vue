@@ -18,8 +18,6 @@ export default {
  
   methods:{
      ...mapActions({addJoke:'setCurrentJoke'}),
-   
-    
   },
 
   computed:{

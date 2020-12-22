@@ -26,10 +26,13 @@ export default new Vuex.Store({
      state.commit('setCurrentJoke', j.joke);
    }
   },
-  modules: {},
+  modules: {
+    
+  },
+
   getters: {
     //Be able to get value with out acessing directly
     getCurrentJoke: state => state.currentJoke,
-    getAlleJokes: state => state.allJokes
+    getAllJokes: state => state.allJokes
   }
 });

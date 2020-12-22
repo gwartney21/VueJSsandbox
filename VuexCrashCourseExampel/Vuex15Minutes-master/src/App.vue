@@ -8,21 +8,6 @@
   </div>
 </template>
 
-<script>
-
-import {mapActions} from "vuex";
-
-export default {
-methods:{
-  //hHelper method that adds functions to the object
-  ...mapActions(['setCurrentJoke'])
-},
-mounted() {
-    this.setCurrentJoke();
-  }
-};
-</script>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
