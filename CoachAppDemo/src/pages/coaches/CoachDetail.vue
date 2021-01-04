@@ -24,7 +24,9 @@
 
 <script>
 export default {
+
   props: ['id'],
+  
   data() {
     return {
       selectedCoach: null,
@@ -32,6 +34,7 @@ export default {
   },
   computed: {
     fullName() {
+      console.log(this.selectedCoach)
       return this.selectedCoach.firstName + ' ' + this.selectedCoach.lastName;
     },
     areas() {
@@ -44,7 +47,7 @@ export default {
       return this.selectedCoach.description;
     },
     contactLink() {
-      return this.$route.path + '/' + this.id + '/contact';
+      return this.$route.path +  '/contact';
     }
   },
   created() {
